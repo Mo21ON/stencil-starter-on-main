@@ -1,3 +1,7 @@
 :root {
     --app-example-var: black;
 }
+html, body{
+    background-color: black;
+  }
+  
