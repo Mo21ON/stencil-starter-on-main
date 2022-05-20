@@ -1,7 +1,27 @@
 :root {
-    --app-example-var: black;
+    --bg-main: #F7F7F7;
+    --font: black;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 html, body{
-    background-color: black;
-  }
-  
+  color: var(--font);
+  height: 100%;
+  background-color:var(--bg-main);
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
