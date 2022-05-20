@@ -6,9 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ContentAreaComponent {
+    }
     interface ExampleComponent {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
+    }
+    interface FooterComponent {
     }
     interface HeaderComponent {
     }
@@ -44,11 +48,23 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLContentAreaComponentElement extends Components.ContentAreaComponent, HTMLStencilElement {
+    }
+    var HTMLContentAreaComponentElement: {
+        prototype: HTMLContentAreaComponentElement;
+        new (): HTMLContentAreaComponentElement;
+    };
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
     }
     var HTMLExampleComponentElement: {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
+    };
+    interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
+    }
+    var HTMLFooterComponentElement: {
+        prototype: HTMLFooterComponentElement;
+        new (): HTMLFooterComponentElement;
     };
     interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
     }
@@ -105,7 +121,9 @@ declare global {
         new (): HTMLWebsiteComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "content-area-component": HTMLContentAreaComponentElement;
         "example-component": HTMLExampleComponentElement;
+        "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "link-component": HTMLLinkComponentElement;
         "links-head-component": HTMLLinksHeadComponentElement;
@@ -118,9 +136,13 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface ContentAreaComponent {
+    }
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
+    }
+    interface FooterComponent {
     }
     interface HeaderComponent {
     }
@@ -155,7 +177,9 @@ declare namespace LocalJSX {
     interface WebsiteComponent {
     }
     interface IntrinsicElements {
+        "content-area-component": ContentAreaComponent;
         "example-component": ExampleComponent;
+        "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "link-component": LinkComponent;
         "links-head-component": LinksHeadComponent;
@@ -171,7 +195,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "content-area-component": LocalJSX.ContentAreaComponent & JSXBase.HTMLAttributes<HTMLContentAreaComponentElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
+            "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "link-component": LocalJSX.LinkComponent & JSXBase.HTMLAttributes<HTMLLinkComponentElement>;
             "links-head-component": LocalJSX.LinksHeadComponent & JSXBase.HTMLAttributes<HTMLLinksHeadComponentElement>;
