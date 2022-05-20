@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'link-component',
   styleUrl: 'link.css',
-  shadow: true,
+  shadow: false,
 })
 export class Link {
 
@@ -14,4 +14,3 @@ export class Link {
     return <a href={this.link}>{this.text}</a>;
   }
 }
-// Komponente Stand 17.05.2022
