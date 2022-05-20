@@ -23,6 +23,7 @@ export namespace Components {
     interface LinksHeadComponent {
     }
     interface LogoComponent {
+        "imagename": string;
     }
     interface MainContentComponent {
     }
@@ -153,6 +154,7 @@ declare namespace LocalJSX {
     interface LinksHeadComponent {
     }
     interface LogoComponent {
+        "imagename"?: string;
     }
     interface MainContentComponent {
     }
