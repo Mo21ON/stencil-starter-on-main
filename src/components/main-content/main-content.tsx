@@ -3,7 +3,7 @@ import { Component,  h } from '@stencil/core';
 @Component({
   tag: 'main-content-component',
   styleUrl: 'main-content.css',
-  shadow: true,
+  shadow: false,
 })
 export class MainContent {
 
