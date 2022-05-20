@@ -6,3 +6,7 @@
     text-align: center;
     flex-direction: row;
   }
+  #header a{
+    padding: 0.5rem;
+    margin-left: 2rem;
+  }
