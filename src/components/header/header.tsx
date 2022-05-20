@@ -3,7 +3,7 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'header-component',
   styleUrl: 'header.css',
-  shadow: true,
+  shadow: false,
 })
 export class Header {
   render() {
