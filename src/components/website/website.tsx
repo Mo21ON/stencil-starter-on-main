@@ -3,7 +3,7 @@ import { Component, h, } from '@stencil/core';
 @Component({
   tag: 'website-component',
   styleUrl: 'website.css',
-  shadow: true,
+  shadow: false,
 })
 export class Website {
   render() {
