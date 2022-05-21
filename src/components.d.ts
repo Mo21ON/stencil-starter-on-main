@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ContactComponent {
+        "mail": string;
+    }
     interface ContentAreaComponent {
     }
     interface ExampleComponent {
@@ -49,6 +52,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLContactComponentElement extends Components.ContactComponent, HTMLStencilElement {
+    }
+    var HTMLContactComponentElement: {
+        prototype: HTMLContactComponentElement;
+        new (): HTMLContactComponentElement;
+    };
     interface HTMLContentAreaComponentElement extends Components.ContentAreaComponent, HTMLStencilElement {
     }
     var HTMLContentAreaComponentElement: {
@@ -122,6 +131,7 @@ declare global {
         new (): HTMLWebsiteComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "contact-component": HTMLContactComponentElement;
         "content-area-component": HTMLContentAreaComponentElement;
         "example-component": HTMLExampleComponentElement;
         "footer-component": HTMLFooterComponentElement;
@@ -137,6 +147,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface ContactComponent {
+        "mail"?: string;
+    }
     interface ContentAreaComponent {
     }
     interface ExampleComponent {
@@ -179,6 +192,7 @@ declare namespace LocalJSX {
     interface WebsiteComponent {
     }
     interface IntrinsicElements {
+        "contact-component": ContactComponent;
         "content-area-component": ContentAreaComponent;
         "example-component": ExampleComponent;
         "footer-component": FooterComponent;
@@ -197,6 +211,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "contact-component": LocalJSX.ContactComponent & JSXBase.HTMLAttributes<HTMLContactComponentElement>;
             "content-area-component": LocalJSX.ContentAreaComponent & JSXBase.HTMLAttributes<HTMLContentAreaComponentElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
