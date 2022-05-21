@@ -1,4 +1,5 @@
 #main{
     display:flex;
     background-color: var(--bg-main);
+    flex-wrap: wrap;
   }
