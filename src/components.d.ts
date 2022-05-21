@@ -11,6 +11,9 @@ export namespace Components {
     }
     interface ContentAreaComponent {
     }
+    interface DisclaimerComponent {
+        "text": string;
+    }
     interface ExampleComponent {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
@@ -63,6 +66,12 @@ declare global {
     var HTMLContentAreaComponentElement: {
         prototype: HTMLContentAreaComponentElement;
         new (): HTMLContentAreaComponentElement;
+    };
+    interface HTMLDisclaimerComponentElement extends Components.DisclaimerComponent, HTMLStencilElement {
+    }
+    var HTMLDisclaimerComponentElement: {
+        prototype: HTMLDisclaimerComponentElement;
+        new (): HTMLDisclaimerComponentElement;
     };
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
     }
@@ -133,6 +142,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "contact-component": HTMLContactComponentElement;
         "content-area-component": HTMLContentAreaComponentElement;
+        "disclaimer-component": HTMLDisclaimerComponentElement;
         "example-component": HTMLExampleComponentElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
@@ -151,6 +161,9 @@ declare namespace LocalJSX {
         "mail"?: string;
     }
     interface ContentAreaComponent {
+    }
+    interface DisclaimerComponent {
+        "text"?: string;
     }
     interface ExampleComponent {
         "exampleProp"?: string;
@@ -194,6 +207,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "contact-component": ContactComponent;
         "content-area-component": ContentAreaComponent;
+        "disclaimer-component": DisclaimerComponent;
         "example-component": ExampleComponent;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
@@ -213,6 +227,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "contact-component": LocalJSX.ContactComponent & JSXBase.HTMLAttributes<HTMLContactComponentElement>;
             "content-area-component": LocalJSX.ContentAreaComponent & JSXBase.HTMLAttributes<HTMLContentAreaComponentElement>;
+            "disclaimer-component": LocalJSX.DisclaimerComponent & JSXBase.HTMLAttributes<HTMLDisclaimerComponentElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
