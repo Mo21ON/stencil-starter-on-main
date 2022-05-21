@@ -27,7 +27,7 @@ export class LinksHeader {
   }
 }
 
-interface LinkData{
+export interface LinkData{
   label: string;
   url: string;
 }
