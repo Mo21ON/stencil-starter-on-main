@@ -4,6 +4,7 @@ import { Component, h, getAssetPath, Listen, Prop, State} from '@stencil/core';
   tag: 'content-area-component',
   styleUrl: 'content-area.css',
   shadow: false,
+  assetsDirs: ['assets'],
 })
 
 export class ContentArea {
