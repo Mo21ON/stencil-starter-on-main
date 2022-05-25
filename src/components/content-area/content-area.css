@@ -1,0 +1,35 @@
+.content-area {
+    width: 100vw;
+    height: 44rem;
+    overflow: hidden;
+  }
+  
+  .content-container {
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .content-container .text-container{
+    padding-left: 6rem;
+    padding-top: 10rem;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+  }
+  
+  .active{
+    opacity: 1!important;
+  }
+  
+  .content-container .text-container h2 {
+    font-size: 5rem;
+  }
+  
+  .content-container .text-container p {
+    font-size: 2rem;
+    max-width: 60rem;
+  }
+  
+  .content-area img {
+    width: 100%;
+    height: 100%;
+  }
