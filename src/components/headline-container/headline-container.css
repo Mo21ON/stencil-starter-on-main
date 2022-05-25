@@ -1,0 +1,13 @@
+.hl-container{
+    padding-top: 2rem;
+  }
+  
+  .hl-container h1,.hl-container h2,.hl-container h3,.hl-container h4,.hl-container h5{
+    padding-left: 2.5rem;
+  }
+  
+  .hl-child{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
