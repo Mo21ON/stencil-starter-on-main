@@ -22,6 +22,10 @@ export namespace Components {
     }
     interface HeaderComponent {
     }
+    interface HeadlineContainer {
+        "headline": string;
+        "type": string;
+    }
     interface LinkBlock {
         "links": string;
     }
@@ -94,6 +98,12 @@ declare global {
         prototype: HTMLHeaderComponentElement;
         new (): HTMLHeaderComponentElement;
     };
+    interface HTMLHeadlineContainerElement extends Components.HeadlineContainer, HTMLStencilElement {
+    }
+    var HTMLHeadlineContainerElement: {
+        prototype: HTMLHeadlineContainerElement;
+        new (): HTMLHeadlineContainerElement;
+    };
     interface HTMLLinkBlockElement extends Components.LinkBlock, HTMLStencilElement {
     }
     var HTMLLinkBlockElement: {
@@ -155,6 +165,7 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
+        "headline-container": HTMLHeadlineContainerElement;
         "link-block": HTMLLinkBlockElement;
         "link-component": HTMLLinkComponentElement;
         "links-head-component": HTMLLinksHeadComponentElement;
@@ -182,6 +193,10 @@ declare namespace LocalJSX {
     interface FooterComponent {
     }
     interface HeaderComponent {
+    }
+    interface HeadlineContainer {
+        "headline"?: string;
+        "type"?: string;
     }
     interface LinkBlock {
         "links"?: string;
@@ -224,6 +239,7 @@ declare namespace LocalJSX {
         "example-component": ExampleComponent;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
+        "headline-container": HeadlineContainer;
         "link-block": LinkBlock;
         "link-component": LinkComponent;
         "links-head-component": LinksHeadComponent;
@@ -245,6 +261,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "headline-container": LocalJSX.HeadlineContainer & JSXBase.HTMLAttributes<HTMLHeadlineContainerElement>;
             "link-block": LocalJSX.LinkBlock & JSXBase.HTMLAttributes<HTMLLinkBlockElement>;
             "link-component": LocalJSX.LinkComponent & JSXBase.HTMLAttributes<HTMLLinkComponentElement>;
             "links-head-component": LocalJSX.LinksHeadComponent & JSXBase.HTMLAttributes<HTMLLinksHeadComponentElement>;
