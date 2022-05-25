@@ -10,6 +10,12 @@ export namespace Components {
         "mail": string;
     }
     interface ContentAreaComponent {
+        "bgcolor": string;
+        "bgimg": string;
+        "fontcolor": string;
+        "headline": string;
+        "text": string;
+        "type": 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
     }
     interface DisclaimerComponent {
         "text": string;
@@ -182,6 +188,12 @@ declare namespace LocalJSX {
         "mail"?: string;
     }
     interface ContentAreaComponent {
+        "bgcolor"?: string;
+        "bgimg"?: string;
+        "fontcolor"?: string;
+        "headline"?: string;
+        "text"?: string;
+        "type"?: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
     }
     interface DisclaimerComponent {
         "text"?: string;
