@@ -17,6 +17,8 @@ export namespace Components {
         "text": string;
         "type": 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
     }
+    interface CookieConsent {
+    }
     interface DisclaimerComponent {
         "text": string;
     }
@@ -59,6 +61,12 @@ declare global {
     var HTMLContentAreaComponentElement: {
         prototype: HTMLContentAreaComponentElement;
         new (): HTMLContentAreaComponentElement;
+    };
+    interface HTMLCookieConsentElement extends Components.CookieConsent, HTMLStencilElement {
+    }
+    var HTMLCookieConsentElement: {
+        prototype: HTMLCookieConsentElement;
+        new (): HTMLCookieConsentElement;
     };
     interface HTMLDisclaimerComponentElement extends Components.DisclaimerComponent, HTMLStencilElement {
     }
@@ -129,6 +137,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "contact-component": HTMLContactComponentElement;
         "content-area-component": HTMLContentAreaComponentElement;
+        "cookie-consent": HTMLCookieConsentElement;
         "disclaimer-component": HTMLDisclaimerComponentElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
@@ -153,6 +162,8 @@ declare namespace LocalJSX {
         "headline"?: string;
         "text"?: string;
         "type"?: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
+    }
+    interface CookieConsent {
     }
     interface DisclaimerComponent {
         "text"?: string;
@@ -186,6 +197,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "contact-component": ContactComponent;
         "content-area-component": ContentAreaComponent;
+        "cookie-consent": CookieConsent;
         "disclaimer-component": DisclaimerComponent;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
@@ -205,6 +217,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "contact-component": LocalJSX.ContactComponent & JSXBase.HTMLAttributes<HTMLContactComponentElement>;
             "content-area-component": LocalJSX.ContentAreaComponent & JSXBase.HTMLAttributes<HTMLContentAreaComponentElement>;
+            "cookie-consent": LocalJSX.CookieConsent & JSXBase.HTMLAttributes<HTMLCookieConsentElement>;
             "disclaimer-component": LocalJSX.DisclaimerComponent & JSXBase.HTMLAttributes<HTMLDisclaimerComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
