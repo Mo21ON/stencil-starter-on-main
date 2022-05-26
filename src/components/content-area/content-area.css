@@ -33,3 +33,21 @@
     width: 100%;
     height: 100%;
   }
+
+  #slideshow{
+    display: flex;
+    flex-wrap: nowrap;
+    position:relative;
+    transition: left 2s ease-in-out;
+  }
+  
+  #controls{
+    z-index: 100;
+    position:absolute;
+    font-size: 2rem;
+    top: 50rem;
+    left: 45rem;
+    cursor: pointer;
+    color: white;
+  }
+  
