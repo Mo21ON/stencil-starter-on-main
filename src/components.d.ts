@@ -60,8 +60,6 @@ export namespace Components {
          */
         "middle": string;
     }
-    interface SlideshowComponent {
-    }
     interface SocialsComponent {
     }
     interface WebsiteComponent {
@@ -146,12 +144,6 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLSlideshowComponentElement extends Components.SlideshowComponent, HTMLStencilElement {
-    }
-    var HTMLSlideshowComponentElement: {
-        prototype: HTMLSlideshowComponentElement;
-        new (): HTMLSlideshowComponentElement;
-    };
     interface HTMLSocialsComponentElement extends Components.SocialsComponent, HTMLStencilElement {
     }
     var HTMLSocialsComponentElement: {
@@ -178,7 +170,6 @@ declare global {
         "logo-component": HTMLLogoComponentElement;
         "main-content-component": HTMLMainContentComponentElement;
         "my-component": HTMLMyComponentElement;
-        "slideshow-component": HTMLSlideshowComponentElement;
         "socials-component": HTMLSocialsComponentElement;
         "website-component": HTMLWebsiteComponentElement;
     }
@@ -238,8 +229,6 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
-    interface SlideshowComponent {
-    }
     interface SocialsComponent {
     }
     interface WebsiteComponent {
@@ -258,7 +247,6 @@ declare namespace LocalJSX {
         "logo-component": LogoComponent;
         "main-content-component": MainContentComponent;
         "my-component": MyComponent;
-        "slideshow-component": SlideshowComponent;
         "socials-component": SocialsComponent;
         "website-component": WebsiteComponent;
     }
@@ -280,7 +268,6 @@ declare module "@stencil/core" {
             "logo-component": LocalJSX.LogoComponent & JSXBase.HTMLAttributes<HTMLLogoComponentElement>;
             "main-content-component": LocalJSX.MainContentComponent & JSXBase.HTMLAttributes<HTMLMainContentComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "slideshow-component": LocalJSX.SlideshowComponent & JSXBase.HTMLAttributes<HTMLSlideshowComponentElement>;
             "socials-component": LocalJSX.SocialsComponent & JSXBase.HTMLAttributes<HTMLSocialsComponentElement>;
             "website-component": LocalJSX.WebsiteComponent & JSXBase.HTMLAttributes<HTMLWebsiteComponentElement>;
         }
