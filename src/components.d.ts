@@ -20,10 +20,6 @@ export namespace Components {
     interface DisclaimerComponent {
         "text": string;
     }
-    interface ExampleComponent {
-        "exampleProp": string;
-        "exampleToUpperCase": () => Promise<void>;
-    }
     interface FooterComponent {
     }
     interface HeaderComponent {
@@ -45,20 +41,6 @@ export namespace Components {
         "imagename": string;
     }
     interface MainContentComponent {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
     interface SocialsComponent {
     }
@@ -83,12 +65,6 @@ declare global {
     var HTMLDisclaimerComponentElement: {
         prototype: HTMLDisclaimerComponentElement;
         new (): HTMLDisclaimerComponentElement;
-    };
-    interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
-    }
-    var HTMLExampleComponentElement: {
-        prototype: HTMLExampleComponentElement;
-        new (): HTMLExampleComponentElement;
     };
     interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
     }
@@ -138,12 +114,6 @@ declare global {
         prototype: HTMLMainContentComponentElement;
         new (): HTMLMainContentComponentElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLSocialsComponentElement extends Components.SocialsComponent, HTMLStencilElement {
     }
     var HTMLSocialsComponentElement: {
@@ -160,7 +130,6 @@ declare global {
         "contact-component": HTMLContactComponentElement;
         "content-area-component": HTMLContentAreaComponentElement;
         "disclaimer-component": HTMLDisclaimerComponentElement;
-        "example-component": HTMLExampleComponentElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "headline-container": HTMLHeadlineContainerElement;
@@ -169,7 +138,6 @@ declare global {
         "links-head-component": HTMLLinksHeadComponentElement;
         "logo-component": HTMLLogoComponentElement;
         "main-content-component": HTMLMainContentComponentElement;
-        "my-component": HTMLMyComponentElement;
         "socials-component": HTMLSocialsComponentElement;
         "website-component": HTMLWebsiteComponentElement;
     }
@@ -188,10 +156,6 @@ declare namespace LocalJSX {
     }
     interface DisclaimerComponent {
         "text"?: string;
-    }
-    interface ExampleComponent {
-        "exampleProp"?: string;
-        "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
     interface FooterComponent {
     }
@@ -215,20 +179,6 @@ declare namespace LocalJSX {
     }
     interface MainContentComponent {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface SocialsComponent {
     }
     interface WebsiteComponent {
@@ -237,7 +187,6 @@ declare namespace LocalJSX {
         "contact-component": ContactComponent;
         "content-area-component": ContentAreaComponent;
         "disclaimer-component": DisclaimerComponent;
-        "example-component": ExampleComponent;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "headline-container": HeadlineContainer;
@@ -246,7 +195,6 @@ declare namespace LocalJSX {
         "links-head-component": LinksHeadComponent;
         "logo-component": LogoComponent;
         "main-content-component": MainContentComponent;
-        "my-component": MyComponent;
         "socials-component": SocialsComponent;
         "website-component": WebsiteComponent;
     }
@@ -258,7 +206,6 @@ declare module "@stencil/core" {
             "contact-component": LocalJSX.ContactComponent & JSXBase.HTMLAttributes<HTMLContactComponentElement>;
             "content-area-component": LocalJSX.ContentAreaComponent & JSXBase.HTMLAttributes<HTMLContentAreaComponentElement>;
             "disclaimer-component": LocalJSX.DisclaimerComponent & JSXBase.HTMLAttributes<HTMLDisclaimerComponentElement>;
-            "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "headline-container": LocalJSX.HeadlineContainer & JSXBase.HTMLAttributes<HTMLHeadlineContainerElement>;
@@ -267,7 +214,6 @@ declare module "@stencil/core" {
             "links-head-component": LocalJSX.LinksHeadComponent & JSXBase.HTMLAttributes<HTMLLinksHeadComponentElement>;
             "logo-component": LocalJSX.LogoComponent & JSXBase.HTMLAttributes<HTMLLogoComponentElement>;
             "main-content-component": LocalJSX.MainContentComponent & JSXBase.HTMLAttributes<HTMLMainContentComponentElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "socials-component": LocalJSX.SocialsComponent & JSXBase.HTMLAttributes<HTMLSocialsComponentElement>;
             "website-component": LocalJSX.WebsiteComponent & JSXBase.HTMLAttributes<HTMLWebsiteComponentElement>;
         }
