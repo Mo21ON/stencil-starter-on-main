@@ -23,14 +23,12 @@ export class Cookie {
     this.hidden = true;
   }
 
-
-  // Cookies Funktion
   render() {
     return (
       <Host style={{display: this.hidden ? "none": "block"}}>
         <div id='cookie'>
           Diese Website benutzt Cookies um die Nutzererfahrung zu verbessern.
-          <div id="cookie-buttons"> 
+          <div id="cookie-buttons">
             <div onClick={() => this.accept()}>Accept All</div>
             <div onClick={() => this.decline()}>Decline</div>
           </div>
