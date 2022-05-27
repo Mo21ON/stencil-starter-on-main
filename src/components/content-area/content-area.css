@@ -66,5 +66,12 @@
     width: 200px;
     margin: 20px;
   }
+
+  #Absatz1 {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 95px;
+    display: flex;
+  }
   
 
