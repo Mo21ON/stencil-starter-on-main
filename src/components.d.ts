@@ -15,7 +15,7 @@ export namespace Components {
         "fontcolor": string;
         "headline": string;
         "text": string;
-        "type": 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
+        "type": 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg' | 'slideshow2';
     }
     interface CookieConsent {
     }
@@ -171,7 +171,7 @@ declare namespace LocalJSX {
         "fontcolor"?: string;
         "headline"?: string;
         "text"?: string;
-        "type"?: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
+        "type"?: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg' | 'slideshow2';
     }
     interface CookieConsent {
     }

@@ -52,6 +52,13 @@
   }
   
 
+  #slideshow2{
+    display: flex;
+    flex-wrap: nowrap;
+    position:relative;
+    transition: left 2s ease-in-out;
+    height: auto;
+  }
 
   #controls{
     z-index: 100;
@@ -99,5 +106,9 @@
     margin-left: 95px;
     display: flex;
   }
-  
+
+  #Coaches{
+    color: orange;
+    font-size: 25px;
+  }  
 
