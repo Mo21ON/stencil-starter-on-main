@@ -27,8 +27,18 @@
   .content-container .text-container p {
     font-size: 2rem;
     max-width: 60rem;
+    
   }
   
+.timer{
+  font-size: 5rem;
+  display: flex;
+  position: absolute;
+  margin-left: 20rem;
+  margin-top: 18rem;
+ 
+}
+
   .content-area img {
     width: 100%;
     height: 100%;
@@ -41,6 +51,8 @@
     transition: left 2s ease-in-out;
   }
   
+
+
   #controls{
     z-index: 100;
     position:absolute;
@@ -50,6 +62,20 @@
     cursor: pointer;
     color: white;
   }
+
+  #Angebot p{
+    position: flex;
+    margin-left: 62rem;
+
+  }
+
+  #Angebot h2{
+    position: flex;
+    margin-left: 67rem;
+    margin-top: 7rem;
+  }
+  
+
 
 
   .pics{
