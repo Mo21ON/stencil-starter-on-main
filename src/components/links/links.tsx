@@ -10,9 +10,6 @@ export class LinksHeader {
     label: "Home",
     url: "/ON-your-styleguide/index.html"
   },{
-    label: "Produkte",
-    url: "/ON-your-styleguide/produkte.html"
-  },{
     label: "Referenzen",
     url: "/ON-your-styleguide/referenzen.html"
   },{
