@@ -58,7 +58,9 @@ export class Timer {
   render() {
     return <Host class="timer">
       <div class="hours">{this.getRemainingHours()}</div>
+      <div>:</div>
       <div class="minutes">{this.getRemainingMinutes()}</div>
+      <div>:</div>
       <div class="seconds">{this.getRemainingSeconds()}</div>
     </Host>;
   }
