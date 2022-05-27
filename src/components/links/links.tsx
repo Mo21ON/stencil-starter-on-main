@@ -16,9 +16,6 @@ export class LinksHeader {
     label: "Referenzen",
     url: "/ON-your-styleguide/referenzen.html"
   },{
-    label: "Über uns",
-    url: "/ON-your-styleguide/ueber-uns.html"
-  },{
     label: "Impressum",
     url: "/ON-your-styleguide/impressum.html"
   },{
