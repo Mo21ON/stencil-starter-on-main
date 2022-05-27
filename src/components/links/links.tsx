@@ -1,4 +1,4 @@
-import { Component,  h } from '@stencil/core';
+import { Component,  h, Host} from '@stencil/core';
 
 @Component({
   tag: 'links-head-component',
@@ -27,9 +27,9 @@ export class LinksHeader {
 }];
 
   render() {
-    return <div id="links">
+    return <Host id="links">
       {this.links.map((l) =>(<a href={l.url}>{l.label}</a>))}
-    </div>;
+    </Host>;
   }
 }
 

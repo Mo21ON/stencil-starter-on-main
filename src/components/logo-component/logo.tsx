@@ -1,4 +1,4 @@
-import { Component, getAssetPath, h, Prop } from '@stencil/core';
+import { Component, getAssetPath, h, Prop, Host } from '@stencil/core';
 
 @Component({
   tag: 'logo-component',
@@ -11,6 +11,6 @@ export class Logo {
   @Prop() imagename: string;
 
   render() {
-    return <div id="logo"><img src={getAssetPath(`./assets/${this.imagename}`)} alt={this.imagename}/></div>;
+    return <Host id="logo"><img src={getAssetPath(`./assets/${this.imagename}`)} alt={this.imagename}/></Host>;
   }
 }

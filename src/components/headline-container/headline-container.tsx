@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Host } from '@stencil/core';
 
 @Component({
   tag: 'headline-container',
@@ -12,9 +12,9 @@ export class HeadlineContainer {
 
   render() {
     let HeadLineTag = `${this.type}`;
-    return <div class="hl-container">
+    return <Host class="hl-container">
       <HeadLineTag>{this.headline}</HeadLineTag>
       <div class="hl-child">
-      <slot/></div></div>;
+      <slot/></div></Host>;
   }
 }

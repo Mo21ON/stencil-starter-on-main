@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'disclaimer-component',
@@ -10,6 +10,6 @@ export class Disclaimer {
   @Prop() text: string;
 
   render() {
-    return <div id="disclaimer"><p>{this.text}</p></div>;
+    return <Host id="disclaimer"><p>{this.text}</p></Host>;
   }
 }
