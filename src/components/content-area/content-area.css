@@ -110,5 +110,18 @@
   #Coaches{
     color: orange;
     font-size: 25px;
+    flex-direction: row;
+    display: flex;
+    margin-left: 17rem;
   }  
+  #Coaches div{
+    margin-left: 11rem;
+    flex-direction: row;
+   
+  }
+
+  #jendrik{
+    display: flex;
+    margin-left: 8rem;
+  }
 
