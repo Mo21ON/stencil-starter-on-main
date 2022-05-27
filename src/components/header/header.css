@@ -11,3 +11,14 @@
     padding: 0.5rem;
     margin-left: 2rem;
   } 
+
+  #header a:hover{
+    background-color: orange;
+    transition: 0.5s;
+    border-radius: 25%;
+    border: none;
+  
+  } 
+ 
+
+
