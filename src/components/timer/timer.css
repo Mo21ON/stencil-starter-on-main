@@ -1,0 +1,38 @@
+#footer {
+    width: 100vw;
+    height: 14rem;
+    border-top: 0.5px solid lightgrey;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  #footerLogo {
+    height: 100%;
+    width: auto;
+    flex-basis: 20%;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15rem;
+    height: calc(100% - 1rem);
+    padding-top: 1rem;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+  }
+  
+  .footer-links a {
+    color: var(--font);
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+  
+  #disclaimer {
+    position: relative;
+    left: 77vw;
+  }
