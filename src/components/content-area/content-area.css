@@ -50,4 +50,19 @@
     cursor: pointer;
     color: white;
   }
+
+  .pics{
+    width: 100%;
+   
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  .pic{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+  }
   
