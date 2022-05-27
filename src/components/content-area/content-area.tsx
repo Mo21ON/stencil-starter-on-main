@@ -1,4 +1,4 @@
-import { Component, h, getAssetPath, Listen, Prop, State } from '@stencil/core';
+import { Component, h, getAssetPath, Listen, Prop, State, Host } from '@stencil/core';
 
 @Component({
   tag: 'content-area-component',
@@ -53,9 +53,10 @@ export class ContentArea {
     if (this.textActive) {
       textClasses.push("active");
     }
-    return <div class='content-area' ref={(el) => this.elem = el as HTMLDivElement}>
+    return <Host class='content-area' ref={(el) => this.elem = el as HTMLDivElement}>
       {this.type === 'imageonly' &&
-        <div class='content-container'><img class='content-img' src={getAssetPath('./assets/' + this.bgimg)} /></div>}
+        <div class='content-container'><img class='content-img' src={getAssetPath('./assets/' + this.bgimg)} />
+          <div><slot /></div></div>}
       {this.type === 'slideshow' && <div class='content-container'>
         <div id='controls'>{this.images.map((_src, index) => <span
           style={{ opacity: index === this.idxActive ? '1' : '0.6' }} onClick={() => this.changePic(index)}>⚫</span>)}</div>
@@ -70,8 +71,8 @@ export class ContentArea {
         backgroundColor: this.bgcolor,
         color: this.fontcolor ?? 'black',
       }}>
-        <div class={textClasses.join(" ")}><h2>{this.headline}</h2><p>{this.text}</p></div></div>}
-    </div>;
+        <div class={textClasses.join(" ")}><h2>{this.headline}</h2><p>{this.text}</p></div><div><slot /></div></div>}
+    </Host>;
   }
 
 }

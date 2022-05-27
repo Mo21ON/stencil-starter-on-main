@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'contact-component',
@@ -10,6 +10,6 @@ export class Contact {
   @Prop() mail: string;
 
   render() {
-    return <div id="contact"><a href={'mailto:'+this.mail}>{this.mail}</a></div>;
+    return <Host id="contact"><a href={'mailto:'+this.mail}>{this.mail}</a></Host>;
   }
 }

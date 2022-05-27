@@ -1,4 +1,4 @@
-import { Component,  h } from '@stencil/core';
+import { Component,  h, Host } from '@stencil/core';
 
 @Component({
   tag: 'footer-component',
@@ -8,7 +8,7 @@ import { Component,  h } from '@stencil/core';
 
 export class Footer {
   render() {
-    return <div id="footer"><slot/></div>;
+    return <Host id="footer"><slot/></Host>;
   }
 }
 

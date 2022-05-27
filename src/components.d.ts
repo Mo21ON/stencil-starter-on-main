@@ -46,6 +46,9 @@ export namespace Components {
     }
     interface SocialsComponent {
     }
+    interface TimerComponent {
+        "hours": string;
+    }
     interface WebsiteComponent {
     }
 }
@@ -128,6 +131,12 @@ declare global {
         prototype: HTMLSocialsComponentElement;
         new (): HTMLSocialsComponentElement;
     };
+    interface HTMLTimerComponentElement extends Components.TimerComponent, HTMLStencilElement {
+    }
+    var HTMLTimerComponentElement: {
+        prototype: HTMLTimerComponentElement;
+        new (): HTMLTimerComponentElement;
+    };
     interface HTMLWebsiteComponentElement extends Components.WebsiteComponent, HTMLStencilElement {
     }
     var HTMLWebsiteComponentElement: {
@@ -148,6 +157,7 @@ declare global {
         "logo-component": HTMLLogoComponentElement;
         "main-content-component": HTMLMainContentComponentElement;
         "socials-component": HTMLSocialsComponentElement;
+        "timer-component": HTMLTimerComponentElement;
         "website-component": HTMLWebsiteComponentElement;
     }
 }
@@ -192,6 +202,9 @@ declare namespace LocalJSX {
     }
     interface SocialsComponent {
     }
+    interface TimerComponent {
+        "hours"?: string;
+    }
     interface WebsiteComponent {
     }
     interface IntrinsicElements {
@@ -208,6 +221,7 @@ declare namespace LocalJSX {
         "logo-component": LogoComponent;
         "main-content-component": MainContentComponent;
         "socials-component": SocialsComponent;
+        "timer-component": TimerComponent;
         "website-component": WebsiteComponent;
     }
 }
@@ -228,6 +242,7 @@ declare module "@stencil/core" {
             "logo-component": LocalJSX.LogoComponent & JSXBase.HTMLAttributes<HTMLLogoComponentElement>;
             "main-content-component": LocalJSX.MainContentComponent & JSXBase.HTMLAttributes<HTMLMainContentComponentElement>;
             "socials-component": LocalJSX.SocialsComponent & JSXBase.HTMLAttributes<HTMLSocialsComponentElement>;
+            "timer-component": LocalJSX.TimerComponent & JSXBase.HTMLAttributes<HTMLTimerComponentElement>;
             "website-component": LocalJSX.WebsiteComponent & JSXBase.HTMLAttributes<HTMLWebsiteComponentElement>;
         }
     }

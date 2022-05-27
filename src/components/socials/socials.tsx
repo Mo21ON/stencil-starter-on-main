@@ -1,4 +1,4 @@
-import { Component, getAssetPath, h } from '@stencil/core';
+import { Component, getAssetPath, h, Host } from '@stencil/core';
 
 interface SocialData{
   alt: string;
@@ -17,16 +17,16 @@ export class Socials {
   private socialdata: SocialData[] = [{
     alt: "Facebook",
     imgsrc:getAssetPath(`./assets/facebook.png`),
-    to: "http://test.de/"
+    to: "http://www.facebook.com/"
   },{
     alt: "Instagram",
     imgsrc: getAssetPath(`./assets/instagram.png`),
-    to: "http://test.de/"
+    to: "http://www.instagram.com/"
   }];
 
   render() {
-    return <div id="socials">
+    return <Host id="socials">
       {this.socialdata.map((d) => <a class="social" href={d.to}><img alt={d.alt} src={d.imgsrc}/></a>)}
-    </div>;
+    </Host>;
   }
 }

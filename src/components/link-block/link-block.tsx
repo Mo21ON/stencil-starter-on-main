@@ -1,4 +1,4 @@
-import { Component, h, Prop, State, Watch } from '@stencil/core';
+import { Component, h, Prop, State, Watch, Host } from '@stencil/core';
 import { LinkData } from '../links/links';
 
 @Component({
@@ -25,11 +25,11 @@ export class LinkBlock {
     render() {
         console.log("render");
         return (
-            <div class="footer-links">
+            <Host class="footer-links">
                 <ul>
                     {this.data.map((l) => (<li><a href={l.url}>{l.label}</a></li>))}
                 </ul>
-            </div>
+            </Host>
         );
     }
 
