@@ -21,7 +21,7 @@ export class ContentArea {
   @Prop() fontcolor: string;
   @Prop() type: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
 
-  private images: string[] = ['./assets/dumbell.jpg', './assets/cardio.jpg'];
+  private images: string[] = ['./assets/pumping3.jpg', './assets/pumping2.jpg', './assets/pumping1.jpg'];
 
   @Listen('scroll', { target: 'window' })
   onScroll() {
