@@ -19,9 +19,10 @@ export class ContentArea {
   @Prop() bgimg: string;
   @Prop() bgcolor: string;
   @Prop() fontcolor: string;
-  @Prop() type: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg';
+  @Prop() type: 'imageonly' | 'slideshow' | 'textheadlinebg' | 'textheadlinecolorbg' | 'slideshow2';
 
   private images: string[] = ['./assets/pumping3.jpg', './assets/pumping2.jpg', './assets/pumping1.jpg'];
+  private imagesref: string[] = ['./assets/bewertungen1.jpg','./assets/bewertungen2.jpg','./assets/bewertungen3.jpg','./assets/bewertungen4.jpg'];
 
   @Listen('scroll', { target: 'window' })
   onScroll() {
@@ -62,6 +63,12 @@ export class ContentArea {
           style={{ opacity: index === this.idxActive ? '1' : '0.6' }} onClick={() => this.changePic(index)}>⚫</span>)}</div>
         <div id='slideshow' style={{ left: this.offset + 'vw' }}>
           {this.images.map((src, index) => <img class='slideshow-img' src={getAssetPath(src)} alt={'image' + index} />)}
+        </div></div>}
+        {this.type === 'slideshow2' && <div class='content-container'>
+        <div id='controls'>{this.imagesref.map((_src, index) => <span
+          style={{ opacity: index === this.idxActive ? '1' : '0.6' }} onClick={() => this.changePic(index)}>⚫</span>)}</div>
+        <div id='slideshow2' style={{ left: this.offset + 'vw' }}>
+          {this.imagesref.map((src, index) => <img class='slideshow-img' src={getAssetPath(src)} alt={'image' + index} />)}
         </div></div>}
       {this.type === 'textheadlinebg' && <div class='content-container' style={{
         backgroundImage: 'url(' + getAssetPath('./assets/' + this.bgimg) + ')',
