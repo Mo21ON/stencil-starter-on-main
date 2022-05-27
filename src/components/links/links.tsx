@@ -7,18 +7,24 @@ import { Component,  h } from '@stencil/core';
 })
 export class LinksHeader {
   private links: LinkData[] = [{
-    label: "Über uns",
-    url: "http://test.de/"
-  },{
-    label: "Impressum",
-    url: "http://test1.de/"
+    label: "Home",
+    url: "/ON-your-styleguide/index.html"
   },{
     label: "Produkte",
-    url: "http://test2.de/"
+    url: "/ON-your-styleguide/produkte.html"
   },{
-    label: "Mitglieder",
-    url: "http://test2.de/"
-  }];
+    label: "Referenzen",
+    url: "/ON-your-styleguide/referenzen.html"
+  },{
+    label: "Über uns",
+    url: "/ON-your-styleguide/ueber-uns.html"
+  },{
+    label: "Impressum",
+    url: "/ON-your-styleguide/impressum.html"
+  },{
+  label: "Datenschutzerklärung",
+  url: "/ON-your-styleguide/datenschutz.html"
+}];
 
   render() {
     return <div id="links">
