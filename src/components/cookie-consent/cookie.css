@@ -33,3 +33,22 @@
 #cookie #cookie-buttons div:hover{
   margin-top: 0.8rem;
 }
+
+h4{
+  font-size: 1.2rem;
+}
+
+#fullheadline h2{
+  margin-left: 40rem;
+  margin-top: -6.5rem;
+  display: flex;
+}
+
+#fullheadline{
+height: 12rem;
+}
+
+#impressum{
+  margin-left: 5rem;
+  margin-top: 1rem ;
+}

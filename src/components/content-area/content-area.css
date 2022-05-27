@@ -120,8 +120,21 @@
    
   }
 
+
+
+
+
+
+
   #jendrik{
     display: flex;
     margin-left: 8rem;
   }
 
+  #datenschutz{
+    margin-left: 2rem;
+    font-size: 12px;
+    overflow-x: hidden;
+  }
+
+  
