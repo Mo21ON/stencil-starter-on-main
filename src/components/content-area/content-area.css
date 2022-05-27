@@ -50,4 +50,22 @@
     cursor: pointer;
     color: white;
   }
+
+
+
+
+
+
+
+
+
+
+
+
   
+#Absatz1 {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 95px;
+  display: flex;
+}
