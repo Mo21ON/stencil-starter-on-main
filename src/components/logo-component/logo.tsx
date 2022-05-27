@@ -1,3 +1,4 @@
+// Jendrik
 import { Component, getAssetPath, h, Prop, Host } from '@stencil/core';
 
 @Component({

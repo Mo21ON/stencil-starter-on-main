@@ -1,3 +1,5 @@
+// Moritz
+
 import { Component, h, Host, Prop, State } from '@stencil/core';
 
 const SECOND = 1000;

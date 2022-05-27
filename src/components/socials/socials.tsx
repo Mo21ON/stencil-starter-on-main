@@ -1,3 +1,5 @@
+// Heiko
+
 import { Component, getAssetPath, h, Host } from '@stencil/core';
 
 interface SocialData{
